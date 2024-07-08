@@ -3,7 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between pt-4 md:w-[90%] md:mx-auto">
+    <section className="flex flex-col md:flex-row items-center justify-between pt-4 md:w-[90%] md:mx-auto my-4">
       <div className="text-center md:text-left md:w-1/2">
         <h1 className="text-3xl md:text-6xl font-bold mx-4 md:mx-0 md:w-74 flex flex-col gap-2 items-start text-headingColor">
             Effortless Elegance.Instant Gratification.</h1>

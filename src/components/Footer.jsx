@@ -11,7 +11,7 @@ const Footer = () => {
         <a href="https://x.com/EzeOnyemaechi51" className="hover:text-primary-color"><FaTwitter /></a>
         <a href="https://www.instagram.com/evelyn_ebunoluwa_vibez/" className="hover:text-primary-color"><FaInstagram /></a>
       </div>
-      <p className='my-2'>Contact us for any details or kindly enter your details below</p>
+      <p className='my-2 text-center'>Contact us for any details or kindly enter your details below</p>
       <div className="flex mb-8">
         <input type="email" placeholder="Enter email or phone number" className="text-sm px-2 rounded-l placeholder:text-primary-color w-64" />
         <button className="bg-primary-color hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r">Send</button>
