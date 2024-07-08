@@ -1,17 +1,20 @@
 import React from 'react';
-
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="text-center p-10 bg-gray-800 text-white">
+    <footer className="flex flex-col items-center p-10 bg-black text-white">
       <p>Contact us</p>
-      <div className="flex justify-center space-x-4 my-4">
-        <a href="https://facebook.com" className="hover:text-gray-400">Facebook</a>
-        <a href="https://twitter.com" className="hover:text-gray-400">Twitter</a>
-        <a href="https://instagram.com" className="hover:text-gray-400">Instagram</a>
+      <div className="flex justify-center space-x-4 my-2">
+        <a href="https://web.facebook.com/onyemaechi.anthony.750/" className="hover:text-primary-color"><FaFacebookF /></a>
+        <a href="https://x.com/EzeOnyemaechi51" className="hover:text-primary-color"><FaTwitter /></a>
+        <a href="https://www.instagram.com/evelyn_ebunoluwa_vibez/" className="hover:text-primary-color"><FaInstagram /></a>
       </div>
-      <div className="mb-4">
-        <input type="email" placeholder="Enter email or phone number" className="p-2 border rounded mr-2" />
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send</button>
+      <p className='my-2'>Contact us for any details or kindly enter your details below</p>
+      <div className="flex mb-8">
+        <input type="email" placeholder="Enter email or phone number" className="text-sm px-2 rounded-l placeholder:text-primary-color w-64" />
+        <button className="bg-primary-color hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r">Send</button>
       </div>
       <p>&copy; 2024 Timbu Shop</p>
     </footer>
