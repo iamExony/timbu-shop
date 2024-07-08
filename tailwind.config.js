@@ -17,7 +17,7 @@ module.exports = {
         'whiteColor': '#ffffff',
         'headingColor': '#4E2020',
         'secondaryColor': '#EBADAD',
-        'lightPink': '#AD5B5B', 
+        'lightPink': '#AD5B5B',  
       },
     },
   },

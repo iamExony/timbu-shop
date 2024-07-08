@@ -14,7 +14,7 @@ const Footer = () => {
       <p className='my-2 text-center'>Contact us for any details or kindly enter your details below</p>
       <div className="flex mb-8">
         <input type="email" placeholder="Enter email or phone number" className="text-sm px-2 rounded-l placeholder:text-primary-color w-64" />
-        <button className="bg-primary-color hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r">Send</button>
+        <button className="bg-primary-color hover:bg-[#E38585] hover:text-primary-color text-white font-bold py-2 px-4 rounded-r">Send</button>
       </div>
       <p>&copy; 2024 Timbu Shop</p>
     </footer>
