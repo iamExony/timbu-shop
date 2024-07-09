@@ -66,7 +66,7 @@ const Checkout = () => {
         </div>
         
         {/* Order Summary Section */}
-        <div className="md:w-1/2 md:ml-10 text-headingColor">
+        <div className="md:w-1/2 md:ml-10">
         <h4 className="text-xl font-semibold my-12 ">Order Summary</h4>
         <div className='flex flex-col md:items-center md:flex-row'>
         <div className='flex items-center gap-2 w-full'>
@@ -117,7 +117,7 @@ const Checkout = () => {
             </div>
           </div>
           <p>Securely pay with your credit card</p>
-          <button className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-normal py-4 p-8 rounded mt-4 float-end">Confirm Order</button>
+          <button className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-normal py-2 p-6 md:py-4 md:p-8 rounded mt-4 float-end">Confirm Order</button>
         </div>
       </div>
     </div>
