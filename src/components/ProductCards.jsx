@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 import { products } from './data';
+import { MdShoppingCart } from "react-icons/md";
 
 
 
@@ -16,17 +17,26 @@ const ProductCards = () => {
   };
 
   return (
-    <section className="p-10 bg-white mb-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {products.map(product => (
-          <div key={product.id} className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
-            <img src={product.image} alt={product.title} className="w-full h-48 object-cover mb-4 rounded" />
+    <section id="product" className="p-10  mx-auto">
+    <div className="flex flex-wrap gap-6 items-center justify-center">
+      {products.map((product) => (
+        <div key={product.id} className="w-4/5 sm:w-1/2 md:w-1/4 px-3 mb-6">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <div className="w-full h-56 mb-4">
+              <img src={product.image} alt={product.title} className="w-full h-full object-cover rounded" />
+            </div>
             <h3 className="text-md font-normal mb-2 text-center">{product.title}</h3>
             <p className="text-gray-700 mb-2">₦{product.amount}</p>
-            <button onClick={() => openModal(product)} className="bg-secondaryColor hover:bg-primary-color hover:text-white text-lightPink font-normal py-2 px-4 rounded w-full">Add to Cart</button>
+            <button
+              onClick={() => openModal(product)}
+              className="flex items-center justify-center gap-2 bg-secondaryColor hover:bg-primary-color hover:text-white text-lightPink font-normal py-2 px-4 rounded w-full"
+            ><MdShoppingCart />
+              <span>Add to Cart</span>
+            </button>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+    </div>
 
       {selectedProduct && <Modal product={selectedProduct} closeModal={closeModal} />}
    

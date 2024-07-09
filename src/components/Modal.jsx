@@ -1,12 +1,8 @@
- import React, { useState } from 'react'; 
-import ShoppingCart from "./ShoppingCart";
+ import React from 'react'; 
 import { Link } from 'react-router-dom';
 
 const Modal = ({ product, closeModal }) => {
-  const [cartItem, setCartItem] = useState(null)
-  /* const cartNext = () =>{
-    setCartPage(true)
-  } */
+ 
   return (
     <div onClick={closeModal}  className="fixed  inset-0 flex items-center justify-center bg-black bg-opacity-60">
       <div className="bg-white p-8 rounded-lg shadow-lg w-3/4 md:w-1/2 lg:w-3/4 lg:h-[80%]">
@@ -21,16 +17,12 @@ const Modal = ({ product, closeModal }) => {
             </div>
            </div>
         
-        {/* <div className="mb-4">
-          <label htmlFor="quantity" className="block text-gray-700">Quantity:</label>
-          <input type="number" id="quantity" name="quantity" defaultValue="1" min="1" className="w-full p-2 border rounded" />
-        </div> */}
         <div className="flex justify-center md:h-64 space-x-4 items-center flex-col w-full">
         <p className='hidden md:block'>You have just 1 item in your cart</p>
         <p className="hidden md:block text-black mb-8 mt-2">Total: ₦{`${product.amount}.00`}</p>
           <button onClick={closeModal} className="bg-white hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4">Continue Shopping</button>
-        <button onClick={()=>setCartItem(product)} className="bg-white hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4"><Link to='shop'> View Cart</Link></button>
-          <button className="bg-primary-color hover:bg-white hover:text-black border-[1px] hover:border-primary-color text-white font-normal py-2 px-4 rounded w-3/4">Proceed to Checkout</button>
+          <Link to='shop'  className="bg-white text-center hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4"> View Cart</Link>
+          <Link to='check' className="bg-primary-color text-center hover:bg-white hover:text-black border-[1px] hover:border-primary-color text-white font-normal py-2 px-4 rounded w-3/4">Proceed to Checkout</Link>
         </div>
         </div>
       </div>

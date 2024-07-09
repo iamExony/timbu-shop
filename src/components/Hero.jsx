@@ -5,8 +5,10 @@ const Hero = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-between pt-4 md:w-[90%] md:mx-auto my-4">
       <div className="text-center md:text-left md:w-1/2">
-        <h1 className="text-3xl md:text-6xl font-bold mx-4 md:mx-0 md:w-74 flex flex-col gap-2 items-start text-headingColor">
-            Effortless Elegance.Instant Gratification.</h1>
+        <h1 className="text-3xl mb-4 md:text-5xl font-bold mx-4 md:mx-0 md:w-full flex flex-col gap-4 items-start text-headingColor">
+            <span>Effortless Elegance.</span>
+            <span>Instant Gratification.</span>
+            </h1>
         <p className="hidden md:block mb-4 text-lightPink font-normal">Seamless Shopping for the discerning customer. Fast finds & instant gratification. Shop Happy!</p>
         <button className="hidden bg-secondaryColor hover:bg-primary-color hover:text-white text-lightPink font-normal py-2 px-4 rounded w-40 md:flex md:gap-2 md:items-center"><span> Shop Now</span> <FaArrowRightLong /></button>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { MdShoppingCart } from "react-icons/md";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,11 +26,11 @@ const Header = () => {
       {/* Navbar */}
       <nav className="hidden md:flex md:space-x-4 font-pop">
         <Link to="/" className="p-1 hover:border-b-2 hover:border-white">Home</Link>
-        <Link to="/product" className="p-1 hover:border-b-2 hover:border-white">Product</Link>
-        <Link to="/contact" className="p-1 hover:border-b-2 hover:border-white">Contact</Link>
+        <a href='#product' className="p-1 hover:border-b-2 hover:border-white">Product</a>
+        <a href="#contact" className="p-1 hover:border-b-2 hover:border-white">Contact</a>
       </nav>
       <a href='#' className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded">
-        <img src="/images/cart-icon.svg" alt="cart" />
+      <MdShoppingCart className='text-black text-3xl' />
       </a>
       <button className="hidden md:flex md:items-center md:gap-2 bg-lightPink hover:bg-[#F5E5FF] hover:text-primary-color hover:font-semibold text-white font-normal py-2 px-4 rounded">
         <span>Get Started</span>
@@ -69,11 +70,8 @@ const Header = () => {
           <a href="#home" className="py-2 px-4 hover:bg-red-500 hover:text-white">
             Home
           </a>
-          <a href="#about" className="py-2 px-4 hover:bg-red-500 hover:text-white">
-            About
-          </a>
-          <a href="#services" className="py-2 px-4 hover:bg-red-500 hover:text-white">
-            Services
+          <a href="#product" className="py-2 px-4 hover:bg-red-500 hover:text-white">
+            Product
           </a>
           <a href="#contact" className="py-2 px-4 hover:bg-red-500 hover:text-white">
             Contact

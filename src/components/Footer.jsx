@@ -4,7 +4,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center p-10 bg-black text-white">
+    <footer id='contact' className="flex flex-col items-center p-10 bg-black text-white">
       <p>Contact us</p>
       <div className="flex justify-center space-x-4 my-2">
         <a href="https://web.facebook.com/onyemaechi.anthony.750/" className="hover:text-primary-color"><FaFacebookF /></a>

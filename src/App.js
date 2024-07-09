@@ -4,9 +4,6 @@ import Home from './components/Home';
 import ShoppingCart from './components/ShoppingCart';
 import Checkout from './components/Checkout';
 
-
-
-
 function App() {
   return (
     <div>
