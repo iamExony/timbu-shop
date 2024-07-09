@@ -67,7 +67,7 @@ const Checkout = () => {
         
         {/* Order Summary Section */}
         <div className="md:w-1/2 md:ml-10">
-        <p className='text-headingColor font-semibold my-4'>Order Summary</p>
+        <h4 className="text-xl font-semibold my-12">Order Summary</h4>
         <div className='flex flex-col md:items-center md:flex-row'>
         <div className='flex items-center gap-2 w-full'>
           <img src="/images/img/6.png" alt="Product" className="w-28 h-28 md:w-64 md:h-64  object-cover rounded mb-4" />
@@ -81,26 +81,43 @@ const Checkout = () => {
           </div>
           </div>
           </div>
-          <div className="mb-4">
+          <div className="mb-4 mt-8">
             <div className="flex">
-              <input type="text" className="flex-1 p-4 border rounded-l" placeholder="Promo Code" />
+              <input type="text" className="flex-1 p-4 border rounded-l placeholder:text-black" placeholder="Promo Code" />
               <button className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-bold py-2 px-8 rounded">Apply</button>
             </div>
           </div>
-          <div className="mb-4">
-            <h4 className="text-xl font-semibold my-12">Method of Payment</h4>
+          {/* Summary Section */}
+            <div className='flex flex-col gap-6 mt-8 '>
+          <div className='flex justify-between gap-32'>
+            <p className="text-xl text-black text-left w-full">Subtotal</p>
+            <p className="text-xl text-black text-left w-1/2">₦30,000.00</p>
+          </div>
+          <div className='flex justify-between gap-32'>
+            <p className="text-xl text-black text-left w-full">Shipping</p>
+            <p className="text-xl text-black text-left w-1/2">₦2,000.00</p>
+          </div>
+          <div className='flex justify-between gap-32'>
+            <p className="text-xl text-black text-left w-full">Order total</p>
+            <p className="text-xl text-black text-left w-1/2">₦32,000.00</p>
+          </div>
+        </div>
+
+          <div className="mb-4 ">
+            <h4 className="text-xl font-semibold mb-8 mt-16">Method of Payment</h4>
             {/* Card Selection */}
             <div className="flex text-sm md:text-xl  gap-8 border-2  border-gray-200 rounded py-8 px-2">
               <label className="flex items-center">
-                <input type="radio" name="payment" className="w-3 h-3 mr-2 accent-primary-color" /> Credit Card
+                <input type="radio" name="payment" className="w-3 h-3 md:w-4 md:h-4 mr-2 accent-primary-color" /> Credit Card
               </label>
               <label className="flex items-center">
-                <input type="radio" name="payment" className="w-4 h-4 mr-2 accent-primary-color" /> Online Payment
+                <input type="radio" name="payment" className="w-3 h-3 md:w-4 md:h-4 mr-2 accent-primary-color" /> Online Payment
               </label>
               <img src='/images/cards.svg'alt='cards' className='object-fit md:w-48'/>
             </div>
           </div>
-          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4 w-full">Confirm</button>
+          <p>Securely pay with your credit card</p>
+          <button className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-normal py-4 p-8 rounded mt-4 float-end">Confirm Order</button>
         </div>
       </div>
     </div>

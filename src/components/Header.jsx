@@ -1,32 +1,86 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
-/* import Header from './Header'; */
-/* import Hero from './Hero';
-import PopularProducts from './PopularProducts';
-import ProductCards from './ProductCards'; */
-/* import Footer from './Footer'; */
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className="bg-white flex justify-between items-center p-5 md:bg-primary-color text-white">
-        <div className='flex gap-2 justify-center items-center'>
-        <img src="images/logo.svg" alt="logo" className='hidden md:block'/>
-        <a href='#' className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded"><img src="/images/bread-icon.svg" alt="cart" /></a>
-      <div className="hidden text-2xl  font-semibold font-inter text-blackColor md:block md:text-white">Timbu</div>  
+      <div className='flex gap-2 justify-center items-center'>
+        <img src="images/logo.svg" alt="logo" className='hidden md:block' />
+        <button onClick={toggleSidebar} className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded">
+          <img src="/images/bread-icon.svg" alt="cart" />
+        </button>
+        <div className="hidden text-2xl font-semibold font-inter text-blackColor md:block md:text-white">Timbu</div>
+      </div>
+
+      {/* Mobile view title */}
+      <div className="text-2xl font-semibold font-inter text-blackColor md:text-white md:hidden">Timbu</div>
+
+      {/* Navbar */}
+      <nav className="hidden md:flex md:space-x-4 font-pop">
+        <Link to="/" className="p-1 hover:border-b-2 hover:border-white">Home</Link>
+        <Link to="/product" className="p-1 hover:border-b-2 hover:border-white">Product</Link>
+        <Link to="/contact" className="p-1 hover:border-b-2 hover:border-white">Contact</Link>
+      </nav>
+      <a href='#' className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded">
+        <img src="/images/cart-icon.svg" alt="cart" />
+      </a>
+      <button className="hidden md:flex md:items-center md:gap-2 bg-lightPink hover:bg-[#F5E5FF] hover:text-primary-color hover:font-semibold text-white font-normal py-2 px-4 rounded">
+        <span>Get Started</span>
+        <FaArrowRightLong />
+      </button>
+
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        } transition-transform duration-300 ease-in-out md:hidden`}
+      >
+        <div className="flex justify-between items-center p-4">
+          {/* Logo */}
+          <img src="images/logo.svg" alt="logo" className="w-12 h-12" />
+          {/* Close Button */}
+          <button onClick={toggleSidebar} className="text-black">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
         </div>
 
-        {/*mobile view title  */}
-        <div className="text-2xl  font-semibold font-inter text-blackColor md:text-white md:hidden">Timbu</div>  
-      
-      {/* Navabar */}
-      <nav className="hidden md:flex md:space-x-4 font-pop">
-      <Link to="/" className="p-1 hover:border-b-2 hover:border-white">Home</Link>
-      <Link to="product" className="p-1 hover:border-b-2 hover:border-white">Product</Link>
-      <Link to="contact" className="p-1 hover:border-b-2 hover:border-white">Contact</Link>
-      </nav>
-      <a href='#' className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded"><img src="/images/cart-icon.svg" alt="cart" /></a>
-      <button className="hidden md:flex md:items-center md:gap-2 bg-lightPink hover:bg-[#F5E5FF] hover:text-primary-color hover:font-semibold text-white font-normal  py-2 px-4 rounded "><span>Get Started</span>  <FaArrowRightLong /></button>
+        {/* Navbar Items */}
+        <nav className="flex flex-col p-4 text-black">
+          <a href="#home" className="py-2 px-4 hover:bg-red-500 hover:text-white">
+            Home
+          </a>
+          <a href="#about" className="py-2 px-4 hover:bg-red-500 hover:text-white">
+            About
+          </a>
+          <a href="#services" className="py-2 px-4 hover:bg-red-500 hover:text-white">
+            Services
+          </a>
+          <a href="#contact" className="py-2 px-4 hover:bg-red-500 hover:text-white">
+            Contact
+          </a>
+        </nav>
+      </div>
+      {/* Sidebar End */}
     </header>
   );
 };
