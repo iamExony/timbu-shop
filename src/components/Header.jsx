@@ -29,9 +29,9 @@ const Header = () => {
         <a href='#product' className="p-1 hover:border-b-2 hover:border-white">Product</a>
         <a href="#contact" className="p-1 hover:border-b-2 hover:border-white">Contact</a>
       </nav>
-      <a href='#' className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded">
+      <Link to="check" className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded">
       <MdShoppingCart className='text-black text-3xl' />
-      </a>
+      </Link>
       <button className="hidden md:flex md:items-center md:gap-2 bg-lightPink hover:bg-[#F5E5FF] hover:text-primary-color hover:font-semibold text-white font-normal py-2 px-4 rounded">
         <span>Get Started</span>
         <FaArrowRightLong />
@@ -67,9 +67,9 @@ const Header = () => {
 
         {/* Navbar Items */}
         <nav className="flex flex-col p-4 text-black">
-          <a href="#home" className="py-2 px-4 hover:bg-red-500 hover:text-white">
+          <Link to="/" className="py-2 px-4 hover:bg-red-500 hover:text-white">
             Home
-          </a>
+          </Link>
           <a href="#product" className="py-2 px-4 hover:bg-red-500 hover:text-white">
             Product
           </a>

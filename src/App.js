@@ -9,8 +9,8 @@ function App() {
     <div>
     <Routes> 
         <Route exact path="/" element={ <Home/> } />
-        <Route exact path="/shop" element={ <ShoppingCart/> } />
-         <Route exact path="/check" element={ <Checkout /> } />
+        <Route exact path="shop" element={ <ShoppingCart/> } />
+         <Route exact path="check" element={ <Checkout /> } />
         {/*<Route path="contact" element={ <Footer /> } /> */}
       </Routes>
       
