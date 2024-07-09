@@ -5,7 +5,6 @@ import PopularProducts from './PopularProducts';
 import ProductCards from './ProductCards';
 import Footer from './Footer';
 
-
 const Home = () => {
   return (
     <>

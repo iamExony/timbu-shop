@@ -26,14 +26,23 @@ const ShoppingCart = () => {
         <h2 className="text-2xl font-bold text-center text-headingColor">Shopping Cart</h2>
       </div>
 
-      <div className="flex  items-center justify-between mb-6 ">
+      <div className="flex md:items-center md:justify-between mb-6 ">
         <img src="/images/img/1.png" alt="Product" className="w-1/5 h-full object-cover rounded mr-4" />
-        <div className="flex-1 ">
+        <div className="md:flex-1 flex flex-col items-start">
           <h3 className="text-xl font-normal">Music System Speaker</h3>
-          <p className="text-gray-700">₦{price.toFixed(2)}</p>
+          <p className="hidden md:block text-gray-700">₦{price.toFixed(2)}</p>
+          
+          <div className="flex md:hidden flex-col justify-center items-start">
+            <div className='flex'>
+          <button onClick={decreaseQuantity} className="hover:text-lightPink hover:bg-secondaryColor text-primary-color font-bold py-2 px-4 rounded">-</button>
+          <input type="number" value={quantity<10 ? `0${quantity}`: quantity} readOnly className="w-12 h-10 text-center border rounded bg-gray-200" />
+          <button onClick={increaseQuantity} className="hover:text-lightPink hover:bg-secondaryColor text-primary-color font-bold py-2 px-4 rounded">+</button>
+        </div>
+        <p className="text-gray-700">₦{total.toFixed(2)}</p>
+        </div>
         </div>
         
-        <div className="flex flex-col gap-2  items-center justify-center ">
+        <div className="hidden md:flex md:flex-col gap-2  items-center justify-center ">
             <p className='text-black font-semibold'>Quantity</p>
             <div className='flex items-center'>
           <button onClick={decreaseQuantity} className="hover:text-lightPink hover:bg-secondaryColor text-primary-color font-bold py-2 px-4 rounded">-</button>
@@ -50,10 +59,10 @@ const ShoppingCart = () => {
           placeholder="Add comment"
           className="bg-gray-200 p-2 border rounded w-full md:w-1/3 mb-4 md:mb-0 md:h-32"
         />
-        <p className="text-black hover:text-primary-color cursor-pointer mb-4 md:mb-0 font-semibold"><Link to="/">Continue Shopping</Link> </p>
+        <Link to="/" className="text-black hover:text-primary-color cursor-pointer mb-4 md:mb-0 font-semibold">Continue Shopping</Link>
         <div className="flex flex-col gap-2 items-center py-12 px-8 border border-primary-color rounded">
           <h4 className="text-xl font-normal">Sub Total: ₦{total.toFixed(2)}</h4>
-          <button className="bg-primary-color hover:text-lightPink hover:bg-secondaryColor text-white font-bold py-2 px-4 rounded ">Proceed to Checkout</button>
+          <Link to="/check" className="bg-primary-color hover:text-lightPink hover:bg-secondaryColor text-white font-bold py-2 px-4 rounded "> Proceed to Checkout</Link>
         </div>
       </div>
     </div>
