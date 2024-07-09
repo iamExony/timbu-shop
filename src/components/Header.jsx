@@ -45,7 +45,7 @@ const Header = () => {
       >
         <div className="flex justify-between items-center p-4">
           {/* Logo */}
-          <img src="images/logo.svg" alt="logo" className="w-12 h-12" />
+          <img src="images/bar-logo.svg" alt="logo" className="w-12 h-12" />
           {/* Close Button */}
           <button onClick={toggleSidebar} className="text-black">
             <svg
@@ -66,7 +66,7 @@ const Header = () => {
         </div>
 
         {/* Navbar Items */}
-        <nav className="flex flex-col p-4 text-black">
+        <nav className="flex flex-col p-4 text-headingColor text-lg font-normal">
           <Link to="/" className="py-2 px-4 hover:bg-red-500 hover:text-white">
             Home
           </Link>
