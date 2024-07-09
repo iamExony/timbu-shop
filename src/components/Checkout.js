@@ -82,24 +82,24 @@ const Checkout = () => {
           </div>
           </div>
           <div className="mb-4 mt-8">
-            <div className="flex">
+            <div className="flex justify-center">
               <input type="text" className="flex-1 p-4 border rounded-l placeholder:text-black" placeholder="Promo Code" />
               <button className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-bold py-2 px-8 rounded">Apply</button>
             </div>
           </div>
           {/* Summary Section */}
             <div className='flex flex-col gap-6 mt-8 '>
-          <div className='flex justify-between gap-32'>
-            <p className="text-xl text-black text-left w-full">Subtotal</p>
-            <p className="text-xl text-black text-left w-1/2">₦30,000.00</p>
+          <div className='flex justify-between'>
+            <p className="text-xl text-black">Subtotal</p>
+            <p className="text-xl text-black ">₦30,000.00</p>
           </div>
-          <div className='flex justify-between gap-32'>
-            <p className="text-xl text-black text-left w-full">Shipping</p>
-            <p className="text-xl text-black text-left w-1/2">₦2,000.00</p>
+          <div className='flex justify-between'>
+            <p className="text-xl text-black">Shipping</p>
+            <p className="text-xl text-black">₦2,000.00</p>
           </div>
-          <div className='flex justify-between gap-32'>
-            <p className="text-xl text-black text-left w-full">Order total</p>
-            <p className="text-xl text-black text-left w-1/2">₦32,000.00</p>
+          <div className='flex justify-between'>
+            <p className="text-xl text-black">Order total</p>
+            <p className="text-xl text-black">₦32,000.00</p>
           </div>
         </div>
 
