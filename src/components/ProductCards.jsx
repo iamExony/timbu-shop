@@ -17,10 +17,10 @@ const ProductCards = () => {
   };
 
   return (
-    <section id="product" className="p-10  mx-auto">
+    <section id="product"  className="bg-[#F4F4F480] p-10  mx-auto">
     <div className="flex flex-wrap gap-6 items-center justify-center">
       {products.map((product) => (
-        <div key={product.id} className="w-3/4 sm:w-1/2 md:w-1/4 px-3 mb-6">
+        <div key={product.id} className="w-full sm:w-1/2 md:w-1/4 px-3 mb-6">
           <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
             <div className="w-full h-56 mb-4">
               <img src={product.image} alt={product.title} className="w-full h-full object-cover rounded" />
