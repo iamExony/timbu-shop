@@ -66,8 +66,8 @@ const Checkout = () => {
         </div>
         
         {/* Order Summary Section */}
-        <div className="md:w-1/2 md:ml-10">
-        <h4 className="text-xl font-semibold my-12">Order Summary</h4>
+        <div className="md:w-1/2 md:ml-10 text-headingColor">
+        <h4 className="text-xl font-semibold my-12 ">Order Summary</h4>
         <div className='flex flex-col md:items-center md:flex-row'>
         <div className='flex items-center gap-2 w-full'>
           <img src="/images/img/6.png" alt="Product" className="w-28 h-28 md:w-64 md:h-64  object-cover rounded mb-4" />
