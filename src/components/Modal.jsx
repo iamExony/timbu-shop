@@ -1,6 +1,12 @@
-import React from 'react';
+ import React, { useState } from 'react'; 
+import ShoppingCart from "./ShoppingCart";
+import { Link } from 'react-router-dom';
 
 const Modal = ({ product, closeModal }) => {
+  const [cartItem, setCartItem] = useState(null)
+  /* const cartNext = () =>{
+    setCartPage(true)
+  } */
   return (
     <div onClick={closeModal}  className="fixed  inset-0 flex items-center justify-center bg-black bg-opacity-60">
       <div className="bg-white p-8 rounded-lg shadow-lg w-3/4 md:w-1/2 lg:w-3/4 lg:h-[80%]">
@@ -23,11 +29,12 @@ const Modal = ({ product, closeModal }) => {
         <p className='hidden md:block'>You have just 1 item in your cart</p>
         <p className="hidden md:block text-black mb-8 mt-2">Total: ₦{`${product.amount}.00`}</p>
           <button onClick={closeModal} className="bg-white hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4">Continue Shopping</button>
-        <button className="bg-white hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4">View Cart</button>
+        <button onClick={()=>setCartItem(product)} className="bg-white hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4"><Link to='shop'> View Cart</Link></button>
           <button className="bg-primary-color hover:bg-white hover:text-black border-[1px] hover:border-primary-color text-white font-normal py-2 px-4 rounded w-3/4">Proceed to Checkout</button>
         </div>
         </div>
       </div>
+    {/*  <ShoppingCart prod={cartItem} /> */}
    </div>
   );
 };

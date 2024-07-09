@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Modal from './Modal';
 import { products } from './data';
 
+
+
 const ProductCards = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   
@@ -27,6 +29,7 @@ const ProductCards = () => {
       </div>
 
       {selectedProduct && <Modal product={selectedProduct} closeModal={closeModal} />}
+   
     </section>
   );
 };

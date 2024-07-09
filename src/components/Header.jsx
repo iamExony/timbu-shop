@@ -1,5 +1,11 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
+/* import Header from './Header'; */
+/* import Hero from './Hero';
+import PopularProducts from './PopularProducts';
+import ProductCards from './ProductCards'; */
+import Footer from './Footer';
 
 const Header = () => {
   return (
@@ -15,10 +21,9 @@ const Header = () => {
       
       {/* Navabar */}
       <nav className="hidden md:flex md:space-x-4 font-pop">
-        <a href="#home" className="p-1 hover:border-b-2 hover:border-white">Home</a>
-        <a href="#shop" className="p-1 hover:border-b-2 hover:border-white">Shop</a>
-        <a href="#about" className="p-1 hover:border-b-2 hover:border-white">About Us</a>
-        <a href="#contact" className="p-1 hover:border-b-2 hover:border-white">Contact</a>
+      <Link to="/" className="p-1 hover:border-b-2 hover:border-white">Home</Link>
+      <Link to="product" className="p-1 hover:border-b-2 hover:border-white">Product</Link>
+      <Link to="contact" className="p-1 hover:border-b-2 hover:border-white">Contact</Link>
       </nav>
       <a href='#' className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded"><img src="/images/cart-icon.svg" alt="cart" /></a>
       <button className="hidden md:flex md:items-center md:gap-2 bg-lightPink hover:bg-[#F5E5FF] hover:text-primary-color hover:font-semibold text-white font-normal  py-2 px-4 rounded "><span>Get Started</span>  <FaArrowRightLong /></button>

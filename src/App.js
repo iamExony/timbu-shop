@@ -1,18 +1,20 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import PopularProducts from './components/PopularProducts';
-import ProductCards from './components/ProductCards';
-import Footer from './components/Footer';
+import { Routes, Route } from "react-router-dom"
+import Home from './components/Home';
+import ShoppingCart from './components/ShoppingCart';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <PopularProducts />
-      <ProductCards />
-      <Footer />
+    <div>
+    <Routes> 
+        <Route path="/" element={ <Home/> } />
+        <Route path="shop" element={ <ShoppingCart/> } />
+        {/* <Route path="product" element={ <ProductCards/> } />
+        <Route path="contact" element={ <Footer /> } /> */}
+      </Routes>
+      
     </div>
   );
 }
