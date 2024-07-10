@@ -6,19 +6,19 @@ import { fadeIn } from '../variant';
 const PopularProducts = () => {
   return (
     <motion.section
-    variants={fadeIn("up",0,2)}
+    variants={fadeIn("up", 0.2)}
     initial = "hidden"
     whileInView={"show"}
     viewport={{once: false, amount: 0.2}} 
     className="text-center p-10 md:p-20 bg-productBg text-2 flex flex-col items-center">
       <motion.h2
-        variants={fadeIn("down",0,2)}
+        variants={fadeIn("down", 0.2)}
         initial = "hidden"
         whileInView={"show"}
         viewport={{once: false, amount: 0.2}}
        className="text-3xl font-bold mb-4 text-headingColor">Our Popular Products</motion.h2>
       <motion.p 
-        variants={fadeIn("up",0,2)}
+        variants={fadeIn("up", 0.2)}
         initial = "hidden"
         whileInView={"show"}
         viewport={{once: false, amount: 0.2}}

@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-between pt-4 md:w-[90%] md:mx-auto my-4">
       <motion.div 
-      variants={fadeIn("right",0,2)}
+      variants={fadeIn("right", 0.2)}
       initial = "hidden"
       whileInView={"show"}
       viewport={{once: false, amount: 0.2}}
@@ -22,7 +22,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
-          variants={fadeIn("left",0,2)}
+          variants={fadeIn("left", 0.5)}
           initial = "hidden"
           whileInView={"show"}
           viewport={{once: false, amount: 0.2}} 
