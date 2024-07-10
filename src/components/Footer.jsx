@@ -2,9 +2,19 @@ import React from 'react';
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { fadeIn } from '../variant';
+import { motion } from 'framer-motion';
+
 const Footer = () => {
   return (
-    <footer id='contact' className="flex flex-col items-center p-10 bg-black text-white">
+    <footer id='contact' className="bg-black text-white">
+      <motion.div
+          variants={fadeIn("up",0,2)}
+          initial = "hidden"
+          whileInView={"show"}
+          viewport={{once: false, amount: 0.2}} 
+          className="flex flex-col items-center p-10 bg-black text-white"
+          >
       <p>Contact us</p>
       <div className="flex justify-center space-x-4 my-2">
         <a href="https://web.facebook.com/onyemaechi.anthony.750/" className="hover:text-primary-color"><FaFacebookF /></a>
@@ -17,6 +27,7 @@ const Footer = () => {
         <button className="bg-primary-color hover:bg-[#E38585] hover:text-primary-color text-white font-bold py-2 px-4 rounded-r">Send</button>
       </div>
       <p>&copy; 2024 Timbu Shop</p>
+      </motion.div>
     </footer>
   );
 };
