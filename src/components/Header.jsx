@@ -54,11 +54,17 @@ const Header = () => {
       <Link to="/check" className="hover:text-primary-color text-white font-bold py-2 px-4 rounded">
       <div>
       <span className='relative'>
-      <img src='/images/circle.svg' className='absolute top-0 left-0'/>
-      <img src='/images/cart-icon.svg' className='block md:hidden relative'/>
+      
+      <img src='/images/cart-icon.svg' className='block md:hidden relative h-[33.87] w-[30.29px]'/>
+      <img src='/images/circle.svg' className='absolute -top-1 -right-2 h-[14.78] w-[14.78]'/>
     </span>
       </div>
-      <img src="/images/cart-icon2.svg" className='hidden md:block'/>
+      <div>
+      <span className='relative'>
+      <img src='/images/cart-icon2.svg' className='hidden md:block relative h-[33.87] w-[30.29px]'/>
+      <img src='/images/circle.svg' className='absolute -top-1 -right-2 h-[14.78] w-[14.78]'/>
+    </span>
+      </div>
       </Link>
       
       <button className="hidden md:flex md:items-center md:gap-2 bg-lightPink hover:bg-[#F5E5FF] hover:text-primary-color hover:font-semibold text-white font-normal py-2 px-4 rounded">
