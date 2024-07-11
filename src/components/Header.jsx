@@ -50,13 +50,22 @@ const Header = () => {
         whileTap={{ scale: 0.9 }} 
         href="#contact" className="p-1 hover:border-b-2 hover:border-white">Contact</motion.a>
       </nav>
-      <Link to="check" className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded">
-        <MdShoppingCart className='text-black text-3xl' />
+      <div className='flex'>
+      <Link to="/check" className="hover:text-primary-color text-white font-bold py-2 px-4 rounded">
+      <div>
+      <span className='relative'>
+      <img src='/images/circle.svg' className='absolute top-0 left-0'/>
+      <img src='/images/cart-icon.svg' className='block md:hidden relative'/>
+    </span>
+      </div>
+      <img src="/images/cart-icon2.svg" className='hidden md:block'/>
       </Link>
+      
       <button className="hidden md:flex md:items-center md:gap-2 bg-lightPink hover:bg-[#F5E5FF] hover:text-primary-color hover:font-semibold text-white font-normal py-2 px-4 rounded">
         <span>Get Started</span>
         <FaArrowRightLong />
       </button>
+      </div>
 
       {/* Sidebar */}
       <motion.div
