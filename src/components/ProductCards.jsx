@@ -2,13 +2,8 @@ import React, { useState, useCallback } from 'react';
 import Modal from './Modal';
 import { products } from './data';
 import { MdShoppingCart } from "react-icons/md";
-/* import { motion } from "framer-motion";
 
-const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
-};
- */
+
 const ProductCards = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -27,6 +22,8 @@ const ProductCards = () => {
         {products.map((product) => (
           <div key={product.id} className="w-full sm:w-1/2 md:w-1/4 px-3 mb-6">
             <div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
             >
               <div className="w-full h-56 mb-4">

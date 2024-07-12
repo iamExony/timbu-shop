@@ -7,29 +7,30 @@ const Checkout = () => {
     <>
     <Header /> 
     <div className="p-10 bg-[#FFF9F980]">
-      <h2 className="text-2xl font-bold mb-12 text-headingColor">CHECKOUT</h2>
+      <form>
+        <h2 className="text-2xl font-bold mb-12 text-headingColor">CHECKOUT</h2>
       
       <div className="flex flex-col md:flex-row justify-between">
         {/* Form Section */}
         <div className="md:w-1/2">
-          <form>
+          
             <p className='text-headingColor font-semibold my-4'>Billing Information</p>            
             <div className="mb-4">
-              <input placeholder='Fullname' type="text" className="placeholder:text-black w-full p-2 border rounded" />
+              <input placeholder='Fullname' type="text" className="placeholder:text-black w-full p-2 border rounded" required/>
             </div>
             <div className="mb-4">
-              <input placeholder='Address' type="text" className="placeholder:text-black w-full p-2 border rounded" />
+              <input placeholder='Address' type="text" className="placeholder:text-black w-full p-2 border rounded" required/>
             </div>
             <p className='text-headingColor font-semibold my-4'>Shipping Address</p>
             <div className="mb-4">
-              <input placeholder='Street' type="text" className="placeholder:text-black  w-full p-2 border rounded" />
+              <input placeholder='Street' type="text" className="placeholder:text-black  w-full p-2 border rounded" required/>
             </div>
             <div className="mb-4">
-              <input placeholder='City' type="text" className="placeholder:text-black  w-full p-2 border rounded" />
+              <input placeholder='City' type="text" className="placeholder:text-black  w-full p-2 border rounded" required/>
             </div>
             <div className="mb-4 flex space-x-4">
               <div className="w-1/2">
-                <input placeholder='State' type="text" className="placeholder:text-black  w-full p-2 border rounded" />
+                <input placeholder='State' type="text" className="placeholder:text-black  w-full p-2 border rounded" required/>
               </div>
               <div className="w-1/2">
                 <input placeholder='Zip Code' type="text" className="placeholder:text-black w-full p-2 border rounded" />
@@ -62,7 +63,7 @@ const Checkout = () => {
             <div className="mb-4">
               <textarea className="w-full h-40  p-6 border rounded placeholder:text-secondaryColor" placeholder="Kindly drop your instruction"></textarea>
             </div>
-          </form>
+          
         </div>
         
         {/* Order Summary Section */}
@@ -117,9 +118,9 @@ const Checkout = () => {
             </div>
           </div>
           <p>Securely pay with your credit card</p>
-          <button className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-normal py-2 p-6 md:py-4 md:p-8 rounded mt-4 float-end">Confirm Order</button>
+          <input type='submit' value="Confirm Order"  className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-normal py-2 p-6 md:py-4 md:p-8 rounded mt-4 float-end" />
         </div>
-      </div>
+      </div></form>
     </div>
     <Footer /> 
     </>
