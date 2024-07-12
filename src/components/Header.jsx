@@ -34,7 +34,7 @@ const Header = () => {
       <nav 
         animate={isOpen ? "open" : "closed"}
         variants={variants}
-        className="hidden md:flex md:space-x-4 font-pop text-[16px]"
+        className="hidden md:flex md:gap-[21px] font-pop text-[16px]"
       >
         <motion.button
             whileHover={{ scale: 1.1 }}
