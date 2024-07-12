@@ -1,6 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer'; 
+//motion
+import {motion} from 'framer-motion'
+import { fadeIn } from '../variant';
 
 const Checkout = () => {
   return (
@@ -12,7 +15,12 @@ const Checkout = () => {
       
       <div className="flex flex-col md:flex-row justify-between">
         {/* Form Section */}
-        <div className="md:w-1/2">
+        <motion.div 
+        variants={fadeIn("right", 0.2)}
+        initial = "hidden"
+        whileInView={"show"}
+        viewport={{once: false, amount: 0.2}} 
+        className="md:w-1/2">
           
             <p className='text-headingColor font-semibold my-4'>Billing Information</p>            
             <div className="mb-4">
@@ -64,10 +72,15 @@ const Checkout = () => {
               <textarea className="w-full h-40  p-6 border rounded placeholder:text-secondaryColor" placeholder="Kindly drop your instruction"></textarea>
             </div>
           
-        </div>
+        </motion.div>
         
         {/* Order Summary Section */}
-        <div className="md:w-1/2 md:ml-10">
+        <motion.div
+          variants={fadeIn("left", 0.2)}
+          initial = "hidden"
+          whileInView={"show"}
+          viewport={{once: false, amount: 0.2}}  
+        className="md:w-1/2 md:ml-10">
         <h4 className="text-xl font-semibold my-12 ">Order Summary</h4>
         <div className='flex flex-col md:items-center md:flex-row'>
         <div className='flex items-center gap-2 w-full'>
@@ -119,8 +132,9 @@ const Checkout = () => {
           </div>
           <p>Securely pay with your credit card</p>
           <input type='submit' value="Confirm Order"  className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-normal py-2 p-6 md:py-4 md:p-8 rounded mt-4 float-end" />
-        </div>
-      </div></form>
+        </motion.div>
+      </div>
+      </form>
     </div>
     <Footer /> 
     </>
