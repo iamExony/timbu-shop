@@ -84,14 +84,14 @@ const Checkout = () => {
         <h4 className="text-xl font-semibold my-12 ">Order Summary</h4>
         <div className='flex flex-col md:items-center md:flex-row'>
         <div className='flex items-center gap-2 w-full'>
-          <img src="/images/img/6.png" alt="Product" className="w-28 h-28 md:w-64 md:h-64  object-cover rounded mb-4" />
+          <img src="/images/img/1.png" alt="Product" className="w-28 h-28 md:w-64 md:h-64  object-cover rounded mb-4" />
           <div className='flex flex-col md:flex-row justify-between w-[80%]'>
           <div className='w-full md:40'>
-          <h3 className="text-md md:text-xl font-normal mb-1">Professional Skipping Rope</h3>
+          <h3 className="text-md md:text-xl font-normal mb-1">Music System Speaker</h3>
           <p className="text-gray-700 mb-1">Size: Big</p>
           <p className="text-gray-700 ">Qty: 1</p>
           </div>
-          <p className="text-gray-700">₦30,000.00</p>
+          <p className="text-gray-700">₦80,000.00</p>
           </div>
           </div>
           </div>
@@ -105,7 +105,7 @@ const Checkout = () => {
             <div className='flex flex-col gap-6 mt-8 '>
           <div className='flex justify-between'>
             <p className="text-xl text-black">Subtotal</p>
-            <p className="text-xl text-black ">₦30,000.00</p>
+            <p className="text-xl text-black ">₦80,000.00</p>
           </div>
           <div className='flex justify-between'>
             <p className="text-xl text-black">Shipping</p>
@@ -113,7 +113,7 @@ const Checkout = () => {
           </div>
           <div className='flex justify-between'>
             <p className="text-xl text-black">Order total</p>
-            <p className="text-xl text-black">₦32,000.00</p>
+            <p className="text-xl text-black">₦82,000.00</p>
           </div>
         </div>
 
