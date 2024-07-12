@@ -19,8 +19,8 @@ const Header = () => {
 
   return (
     <header className="bg-white flex justify-between items-center p-5 md:bg-primary-color text-white">
-      <div className='flex gap-2 justify-center items-center'>
-        <img src="images/logo.svg" alt="logo" className='hidden md:block' />
+      <div className='flex gap-[4px] justify-center items-center'>
+        <img src="images/logo.svg" alt="logo" className='hidden md:block w-[40px] h-[40px]'  />
         <button onClick={toggleSidebar} className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded">
           <img src="/images/bread-icon.svg" alt="menu" />
         </button>
@@ -34,12 +34,12 @@ const Header = () => {
       <nav 
         animate={isOpen ? "open" : "closed"}
         variants={variants}
-        className="hidden md:flex md:space-x-4 font-pop"
+        className="hidden md:flex md:space-x-4 font-pop text-[16px]"
       >
         <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} >
-          <Link to="/" className="p-1 hover:border-b-2 hover:border-white">Home
+          <Link to="/" className="p-[10px] hover:border-b-2 hover:border-white">Home
         </Link>
         </motion.button>
         <motion.a
