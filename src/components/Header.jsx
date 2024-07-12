@@ -18,7 +18,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white flex justify-between items-center p-5 md:bg-primary-color text-white">
+    <header className="md:bg-primary-color text-white">
+      <div className=" flex justify-between items-center p-[30px] w-[95%] mx-auto">
       <div className='flex gap-[4px] justify-center items-center'>
         <img src="images/logo.svg" alt="logo" className='hidden md:block w-[40px] h-[40px]'  />
         <button onClick={toggleSidebar} className="block md:hidden hover:text-primary-color text-white font-bold py-2 px-4 rounded">
@@ -51,7 +52,7 @@ const Header = () => {
         whileTap={{ scale: 0.9 }} 
         href="#contact" className="p-1 hover:border-b-2 hover:border-white">Contact</motion.a>
       </nav>
-      <div className='flex'>
+      <div className='flex gap-[42px]'>
       <Link to="/shop" className="hover:text-primary-color text-white font-bold py-2 px-4 rounded">
       <div>
       <span className='relative'>
@@ -126,6 +127,7 @@ const Header = () => {
         </nav>
       </motion.div>
       {/* Sidebar End */}
+      </div>
     </header>
   );
 };
