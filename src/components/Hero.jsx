@@ -12,13 +12,15 @@ const Hero = () => {
       initial = "hidden"
       whileInView={"show"}
       viewport={{once: false, amount: 0.2}}
-      className="text-center md:text-left md:w-1/2">
-        <h1 className="text-3xl mb-4 md:text-5xl font-bold mx-4 md:mx-0 md:w-full flex flex-col gap-4 items-start text-headingColor">
+      className="text-center md:text-left md:flex md:flex-col md:w-[693px]">
+        <h1 className="text-3xl mb-4 md:text-5xl font-[700] mx-4 md:mx-0 md:w-full flex flex-col gap-4 items-start text-headingColor">
             <span>Effortless Elegance.</span>
             <span>Instant Gratification.</span>
             </h1>
-        <p className="hidden md:block mb-4 text-lightPink font-normal">Seamless Shopping for the discerning customer. Fast finds & instant gratification. Shop Happy!</p>
-        <button className="hidden bg-secondaryColor hover:bg-primary-color hover:text-white text-lightPink font-normal py-2 px-4 rounded w-40 md:flex md:gap-2 md:items-center"><span> Shop Now</span> <FaArrowRightLong /></button>
+        <div>
+        <p className="hidden md:w-[399px] md:leading-[25px] md:block mb-4 text-lightPink font-normal">Seamless Shopping for the discerning customer. Fast finds & instant gratification. Shop Happy!</p>
+        <a href="#product" className="hidden bg-secondaryColor hover:bg-primary-color hover:text-white text-lightPink font-normal py-2 px-4 rounded w-40 md:flex md:gap-2 md:items-center"><span> Shop Now</span> <FaArrowRightLong /></a>
+      </div>
       </motion.div>
 
       <motion.div
