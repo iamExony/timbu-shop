@@ -18,9 +18,9 @@ const ProductCards = () => {
 
   return (
     <section id="product" className="bg-[#F4F4F480] p-10 mx-auto">
-      <div className="flex flex-wrap gap-6 items-center justify-center">
+      <div className="w-full flex flex-wrap flex-col md:flex-row gap-[52px] items-center justify-center">
         {products.map((product) => (
-          <div key={product.id} className="w-full sm:w-1/2 md:w-1/4 px-3 mb-6">
+          <div key={product.id} className="w-full sm:w-1/4 md:w-1/4 px-3 mb-6">
             <div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
