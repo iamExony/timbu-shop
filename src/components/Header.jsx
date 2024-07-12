@@ -10,6 +10,7 @@ const variants = {
 }
 
 const Header = () => {
+  const [count, setCount] = useState(1)
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -51,10 +52,9 @@ const Header = () => {
         href="#contact" className="p-1 hover:border-b-2 hover:border-white">Contact</motion.a>
       </nav>
       <div className='flex'>
-      <Link to="/check" className="hover:text-primary-color text-white font-bold py-2 px-4 rounded">
+      <Link to="/shop" className="hover:text-primary-color text-white font-bold py-2 px-4 rounded">
       <div>
       <span className='relative'>
-      
       <img src='/images/cart-icon.svg' className='block md:hidden relative h-[33.87] w-[30.29px]'/>
       <img src='/images/circle.svg' className='absolute -top-1 -right-2 h-[14.78] w-[14.78]'/>
     </span>
