@@ -1,0 +1,13 @@
+/*     const [quantity, setQuantity] = useState(1);
+    const price = 80000; // Example price
+    const total = price * quantity;
+  
+    const increaseQuantity = () => {
+      setQuantity(quantity + 1);
+    };
+  
+    const decreaseQuantity = () => {
+      if (quantity > 1) {
+        setQuantity(quantity - 1);
+      }
+    };  */

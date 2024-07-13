@@ -1,21 +1,30 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
+import Home from './pages/Home';
 import ShoppingCart from './components/ShoppingCart';
 import Checkout from './components/Checkout';
-import { CartProvider } from './components/CartContext';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ProductDetails from './pages/ProductDetails';
+import {BrowserRouter as Router,  Route, Routes } from 'react-router-dom';
+import Products from './components/Products';
+
+
 
 function App() {
   return (
-    <CartProvider>
       <div>
+        <Router>
+        <Header />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route exact path="/shop" element={<ShoppingCart />} />
           <Route exact path="/check" element={<Checkout />} />
+          <Route exact path="/products" element={<Products />} />
+          <Route exact path="/product/:id" element={<ProductDetails />} />
         </Routes>
+        <Footer />
+        </Router>
       </div>
-    </CartProvider>
   );
 }
 

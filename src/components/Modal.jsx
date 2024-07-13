@@ -1,18 +1,20 @@
  import React from 'react'; 
 import { Link } from 'react-router-dom';
+/* import { ProductContext } from '../context/ProductContext' */
 
 const Modal = ({ product, closeModal }) => {
- 
+
+
   return (
     <div onClick={closeModal}  className="fixed  inset-0 flex items-center justify-center bg-black bg-opacity-60">
       <div className="bg-white p-8 rounded-lg shadow-lg w-3/4 md:w-1/2 lg:w-3/4 lg:h-[80%]">
       <p className='text-sm mb-2 font-normal text-center md:text-left lg:mt-12'>Item Secured! You're One Step Closer to Checkout</p>
       <div className='md:flex md:items-center'>
         <div className="hidden  md:w-3/4 md:flex mt-8 md:flex-col  md:justify-end md:items-center md:text-center">
-          <img src={product.image} alt={product.title} className="w-full h-24 md:w-48 md:h-48 object-cover rounded mr-4" />
+          <img src={product.image} alt={product.name} className="w-full h-24 md:w-48 md:h-48 object-cover rounded mr-4" />
           
             <div>
-            <h3 className="text-md font-normal mt-2">{product.title}</h3>
+            <h3 className="text-md font-normal mt-2">{product.name}</h3>
             <p className="text-gray-700">Qty: {product.qty}</p>
             </div>
            </div>

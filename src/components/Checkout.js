@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer'; 
 //motion
 import {motion} from 'framer-motion'
 import { fadeIn } from '../variant';
@@ -8,7 +6,6 @@ import { fadeIn } from '../variant';
 const Checkout = () => {
   return (
     <>
-    <Header /> 
     <div className="p-10 bg-[#FFF9F980]">
       <form>
         <h2 className="text-2xl font-bold mb-12 text-headingColor">CHECKOUT</h2>
@@ -136,7 +133,6 @@ const Checkout = () => {
       </div>
       </form>
     </div>
-    <Footer /> 
     </>
   );
 };
