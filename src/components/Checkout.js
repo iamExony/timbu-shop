@@ -132,6 +132,43 @@ const Checkout = () => {
                   placeholder="Kindly drop your instruction"
                 ></textarea>
               </div>
+
+              {/* Payment section */}
+              <div className="mb-4 ">
+                <h4 className="text-xl font-semibold mb-8 mt-16">
+                  Method of Payment
+                </h4>
+                {/* Card Selection */}
+                <div className="flex text-sm md:text-xl  gap-8 border-2  border-gray-200 rounded py-4 md:py-8 px-2">
+                  <label className="flex items-center">
+                    <input
+                      type="radio"
+                      name="payment"
+                      className="md:w-4 md:h-4 md:mr-2 accent-primary-color"
+                    />{" "}
+                    Credit Card
+                  </label>
+                  <label className="flex items-center">
+                    <input
+                      type="radio"
+                      name="payment"
+                      className=" md:w-4 md:h-4 md:mr-2 accent-primary-color"
+                    />{" "}
+                    Online Payment
+                  </label>
+                  <img
+                    src="/images/cards.svg"
+                    alt="cards"
+                    className="object-fit md:w-48"
+                  />
+                </div>
+              </div>
+              <p>Securely pay with your credit card</p>
+              <input
+                type="submit"
+                value="Confirm Order"
+                className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-normal py-2 p-6 md:py-4 md:p-8 rounded mt-4 float-end"
+              />
             </motion.div>
 
             {/* Order Summary Section */}
@@ -175,7 +212,7 @@ const Checkout = () => {
                 <div className="flex justify-center">
                   <input
                     type="text"
-                    className="flex-1 p-4 border rounded-l placeholder:text-black"
+                    className="flex-1 border rounded-l placeholder:text-black md:w-[454px] md:h-[60px] p-4"
                     placeholder="Promo Code"
                   />
                   <button className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-semibold md:py-2 px-8 rounded">
@@ -198,42 +235,6 @@ const Checkout = () => {
                   <p className="text-xl text-black">₦{orderTotal.toFixed(2)}</p>
                 </div>
               </div>
-
-              <div className="mb-4 ">
-                <h4 className="text-xl font-semibold mb-8 mt-16">
-                  Method of Payment
-                </h4>
-                {/* Card Selection */}
-                <div className="flex text-sm md:text-xl  gap-8 border-2  border-gray-200 rounded py-4 md:py-8 px-2">
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="payment"
-                      className="md:w-4 md:h-4 md:mr-2 accent-primary-color"
-                    />{" "}
-                    Credit Card
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="payment"
-                      className=" md:w-4 md:h-4 md:mr-2 accent-primary-color"
-                    />{" "}
-                    Online Payment
-                  </label>
-                  <img
-                    src="/images/cards.svg"
-                    alt="cards"
-                    className="object-fit md:w-48"
-                  />
-                </div>
-              </div>
-              <p>Securely pay with your credit card</p>
-              <input
-                type="submit"
-                value="Confirm Order"
-                className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-normal py-2 p-6 md:py-4 md:p-8 rounded mt-4 float-end"
-              />
             </motion.div>
           </div>
         </form>
