@@ -17,7 +17,7 @@ const Modal = ({ product, closeModal }) => {
             <img src={`https://api.timbu.cloud/images/${product.photos[0].url}`} alt={product.name} className="w-full h-24 md:w-48 md:h-48 object-cover rounded mr-4" />
             <div>
               <h3 className="text-md font-normal mt-2">{product.name}</h3>
-              <p className="text-gray-700">Qty: {product.qty}</p>
+              <p className="text-gray-700">Available Quantity: {product.available_quantity}</p>
             </div>
           </div>
           <div className="flex justify-center md:h-64 space-x-4 items-center flex-col w-full">
@@ -25,7 +25,7 @@ const Modal = ({ product, closeModal }) => {
             <p className="hidden md:block text-black mb-8 mt-2">Total: ₦{`${product.current_price[0].NGN[0]}.00`}</p>
             <button onClick={closeModal} className="bg-white hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4">Continue Shopping</button>
             <Link to='/shop' className="bg-white text-center hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4"> View Cart ({totalItems})</Link>
-            <Link to='/checkout' className="bg-primary-color text-center hover:bg-white hover:text-black border-[1px] hover:border-primary-color text-white font-normal py-2 px-4 rounded w-3/4">Proceed to Checkout</Link>
+            <Link to='/check' className="bg-primary-color text-center hover:bg-white hover:text-black border-[1px] hover:border-primary-color text-white font-normal py-2 px-4 rounded w-3/4">Proceed to Checkout</Link>
           </div>
         </div>
       </div>
