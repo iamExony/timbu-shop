@@ -125,7 +125,7 @@ const Products = () => {
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}
             className={`px-4 py-2 mx-1 ${
-              currentPage === 1 ? "cursor-not-allowed" : "hover:bg-gray-200"
+              currentPage === 1 ? "cursor-not-allowed" : "hover:bg-primary-color hover:text-white"
             }`}
           >
             Previous
@@ -137,7 +137,7 @@ const Products = () => {
               className={`px-4 py-2 mx-1 ${
                 currentPage === index + 1
                   ? "bg-primary-color text-white"
-                  : "hover:bg-gray-200"
+                  : "hover:bg-primary-color hover:text-white"
               }`}
             >
               {index + 1}
@@ -149,7 +149,7 @@ const Products = () => {
             className={`px-4 py-2 mx-1 ${
               currentPage === totalPages
                 ? "cursor-not-allowed"
-                : "hover:bg-gray-200"
+                : "hover:bg-primary-color hover:text-white"
             }`}
           >
             Next
