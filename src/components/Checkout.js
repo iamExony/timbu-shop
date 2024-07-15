@@ -164,6 +164,32 @@ const Checkout = () => {
                     className="object-fit md:w-48"
                   />
                 </div>
+                {/* Card Selection Desktop*/}
+                <div className="hidden md:flex text-[10px] md:text-xl  md:gap-8 border-2  border-gray-200 rounded py-4 md:py-8 px-2">
+                  
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="payment"
+                        className="md:w-4 md:h-4 md:mr-2 accent-primary-color"
+                      />{" "}
+                      Credit Card
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="payment"
+                        className=" md:w-4 md:h-4 md:mr-2 accent-primary-color"
+                      />{" "}
+                      Online Payment
+                    </label>
+                 
+                  <img
+                    src="/images/cards.svg"
+                    alt="cards"
+                    className="object-fit md:w-48"
+                  />
+                </div>
               </div>
               <p>Securely pay with your credit card</p>
               <input

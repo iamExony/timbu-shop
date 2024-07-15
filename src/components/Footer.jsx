@@ -262,7 +262,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter email"
-              className="text-sm text-black px-2 rounded-l placeholder:text-primary-color w-48"
+              className="text-sm text-black px-2 rounded-l placeholder:text-primary-color "
             />
             <button className="bg-primary-color hover:bg-[#E38585] hover:text-primary-color text-white font-bold py-2 px-4 rounded-r">
               Subscribe
