@@ -5,11 +5,9 @@ import { Link } from 'react-router-dom';
 import EmptyCartImage from '../assets/empty_cart.png'; // Ensure you have an image for empty cart
 
 const ShoppingCart = () => {
-  const { cart, clearCart } = useContext(CartContext);
-
-  const totalAmount = cart.reduce((acc, item) => {
-    return acc + item.amount * item.current_price[0].NGN[0];
-  }, 0);
+  const { cart, clearCart , getTotalAmount} = useContext(CartContext);
+  
+  const totalAmount = getTotalAmount();
 
   return (
     <>
@@ -27,7 +25,7 @@ const ShoppingCart = () => {
           <h2 className="text-2xl font-bold text-center text-headingColor">Shopping Cart</h2>
         </div>
             {cart.map((item) => (
-              <CartItem key={item.unique_id} item={item} />
+              <CartItem key={item.id} item={item} />
             ))}
 
             <div className="border-t border-gray-300 flex flex-col md:flex-row justify-between items-center my-6 py-6">
