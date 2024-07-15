@@ -3,15 +3,13 @@ import React from 'react'
 import Hero from '../components/Hero';
 import PopularProducts from '../components/PopularProducts';
 import ProductCards from '../components/ProductCards';
-import ProductDetails from './ProductDetails';
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <ProductDetails />
-      <PopularProducts />
-      <ProductCards />
+       <Hero />
+       <PopularProducts /> 
+       <ProductCards /> 
     </>
   )
 }
