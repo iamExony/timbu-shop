@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import ProductDetails from './pages/ProductDetails';
 import {BrowserRouter as Router,  Route, Routes } from 'react-router-dom';
 import Products from './components/Products';
+import Sidebar from './components/Sidebar';
 
 
 
@@ -15,7 +16,7 @@ function App() {
       <div>
         <Router>
         <Header />
-        
+        <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route exact path="/shop" element={<ShoppingCart />} />

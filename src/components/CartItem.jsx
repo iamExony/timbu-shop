@@ -37,7 +37,7 @@ const CartItem = ({ item }) => {
         <h3 className="text-xl font-normal">{item.name}</h3>
         <p className="hidden md:block text-gray-700">₦{price}</p>
 
-        <div className="flex md:hidden flex-col justify-center items-start">
+        <div className="flex my-1 md:hidden flex-col justify-center items-start">
           <div className="flex">
             <button
               onClick={decreaseQuantity}
@@ -59,6 +59,12 @@ const CartItem = ({ item }) => {
             </button>
           </div>
           <p className="text-gray-700">₦{price}</p>
+          <button
+          onClick={() => removeCart(item.unique_id)}
+          className="block text-primary-color"
+        >
+          Remove
+        </button>
         </div>
       </div>
 
@@ -87,7 +93,7 @@ const CartItem = ({ item }) => {
         <p className="text-gray-700">₦{total.toFixed(2)}</p>
         <button
           onClick={() => removeCart(item.unique_id)}
-          className="text-primary-color"
+          className="block text-primary-color"
         >
           Remove
         </button>

@@ -16,6 +16,7 @@ const ShoppingCart = () => {
         {cart.length === 0 ? (
           <div className="flex flex-col items-center justify-center">
              <p className="text-gray-700 text-xl">Your cart is empty</p>
+             <button className="bg-white hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4"><Link to='/products'>Continue Shopping</Link></button>
              <img src={EmptyCartImage} alt="Empty Cart" className="w-1/2 h-1/2" />
            
           </div>
@@ -47,7 +48,7 @@ const ShoppingCart = () => {
             {cart.length > 1 && (
               <button
                 onClick={clearCart}
-                className="text-primary-color bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-auto my-4"
+                className="text-black border-2 border-black hover:border-none bg-transparent hover:bg-red-700 hover:text-white font-medium py-2 px-4 rounded mx-auto my-4"
               >
                 Clear All
               </button>

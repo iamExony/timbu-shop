@@ -23,7 +23,7 @@ const Modal = ({ product, closeModal }) => {
           <div className="flex justify-center md:h-64 space-x-4 items-center flex-col w-full">
             <p className='hidden md:block'>You have just 1 item in your cart</p>
             <p className="hidden md:block text-black mb-8 mt-2">Total: ₦{`${product.current_price[0].NGN[0]}.00`}</p>
-            <button onClick={closeModal} className="bg-white hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4">Continue Shopping</button>
+            <button onClick={closeModal} className="bg-white hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4"><Link to='/products'>Continue Shopping</Link></button>
             <Link to='/shop' className="bg-white text-center hover:bg-primary-color hover:text-white border-[1px] border-primary-color text-black font-normal py-2 px-4 rounded w-3/4 mb-4"> View Cart ({totalItems})</Link>
             <Link to='/check' className="bg-primary-color text-center hover:bg-white hover:text-black border-[1px] hover:border-primary-color text-white font-normal py-2 px-4 rounded w-3/4">Proceed to Checkout</Link>
           </div>

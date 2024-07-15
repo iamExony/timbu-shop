@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { SidebarContext } from "./SidebarContext";
+import { SidebarContext } from "../context/SidebarContext";
 
 const variants = {
   open: { opacity: 1, x: 0 },
@@ -55,15 +55,14 @@ const Sidebar = () => {
             Home
           </Link>
         </motion.button>
-        <motion.a
+        <motion.span
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          href="#product"
           className="py-2 px-4 hover:bg-red-500 hover:text-white"
           onClick={toggleSidebar}
         >
           <Link to="/products">Product</Link>
-        </motion.a>
+        </motion.span>
         <motion.a
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -74,11 +73,6 @@ const Sidebar = () => {
           Contact
         </motion.a>
       </nav>
-
-      {/* Circle div for mobile view */}
-{/*       <div className="absolute -top-1 -right-2 h-[14.78] w-[14.78] bg-black text-white flex items-center justify-center rounded-full">
-        0
-      </div> */}
     </motion.div>
   );
 };
