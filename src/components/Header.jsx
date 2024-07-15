@@ -95,7 +95,7 @@ const Header = () => {
               className="block md:hidden h-8 w-8"
             />
             {/* Circle div for mobile view */}
-            <div className="md:hidden absolute w-[20.54px] h-[20.54px] -top-1 -right-2 -mt-1 -mr-2 p-1 text-xs font-medium bg-black text-white flex items-center justify-center rounded-full">
+            <div className="md:hidden absolute w-[20.54px] h-[20.54px] -top-1 -right-2 -mt-1 -mr-2 p-1 text-xs font-medium bg-red-500 text-white flex items-center justify-center rounded-full">
               {totalItems}
             </div>
           </div>
