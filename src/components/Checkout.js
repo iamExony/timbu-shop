@@ -177,7 +177,7 @@ const Checkout = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.2 }}
-              className="md:w-1/2 md:ml-10 bg-[#FAF4FF]  px-4"
+              className="md:w-1/2 md:ml-10 bg-[#FAF4FF]  px-4 md:sticky md:top-0"
             >
               <h4 className="text-xl font-semibold my-12 ">Order Summary</h4>
               {cart.map((item) => (
