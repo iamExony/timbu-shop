@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer id='contact' className="bg-black text-white">
+    <footer id='contact' className="bg-black text-white overflow-hidden ">
       <div
           className="flex flex-col items-center p-10 bg-black text-white"
           >

@@ -4,36 +4,56 @@ import axios from 'axios';
 // Create context
 export const ProductContext = createContext();
 
+const fetchProducts = async (page) => {
+  const apiUrl = `https://timbu-get-all-products.reavdev.workers.dev/`;
+
+  const response = await axios.get(apiUrl, {
+    params: {
+      organization_id: process.env.REACT_APP_ORGANISATION_ID,
+      reverse_sort: false,
+      page: page,
+      size: 9,
+      Appid: process.env.REACT_APP_APP_ID,
+      Apikey: process.env.REACT_APP_API_KEY,
+    },
+  });
+  return response.data;
+}
+
 const ProductProvider = ({ children }) => {
-    // Products state
-    const [products, setProducts] = useState([]);
-///api/products
-//https://api.timbu.cloud/products
-//https://timbu-get-all-products.reavdev.workers.dev/products
-    useEffect(() => {
-        const fetchProducts = async () => {
-            try {
-                const apiKey = process.env.REACT_APP_API_KEY;
-                const appId = process.env.REACT_APP_APP_ID;
-                const orgId = process.env.REACT_APP_ORGANISATION_ID;
-                const apiUrl = `https://timbu-get-all-products.reavdev.workers.dev/products?organization_id=${orgId}&reverse_sort=false&page=2&size=9&Appid=${appId}&Apikey=${apiKey}`;
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isEmpty, setIsEmpty] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
-                const response = await axios.get(apiUrl);
-                setProducts(response.data.items); // Update state with fetched data
-                console.log(response.data); // Update state with fetched data
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
+  useEffect(() => {
+    const getProducts = async () => {
+      setIsLoading(true);
+      setIsError(false);
+      try {
+        const data = await fetchProducts(currentPage);
+        setProducts(data.items);
+        setTotalPages(Math.ceil(data.total / 9)); // Assuming `data.total` is the total number of products
+        setIsEmpty(data.total === 0);
+      } catch (error) {
+        setIsError(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-        fetchProducts();
-    }, []);
-/* console.log(products.name) */
-    return (
-        <ProductContext.Provider value={{ products }}>
-            {children}
-        </ProductContext.Provider>
-    );
+    getProducts();
+  }, [currentPage]);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  return (
+    <ProductContext.Provider value={{ products, paginate, totalPages, currentPage, isLoading, isError, isEmpty }}>
+      {children}
+    </ProductContext.Provider>
+  );
 };
 
 export default ProductProvider;
