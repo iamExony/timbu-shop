@@ -138,24 +138,26 @@ const Checkout = () => {
                 <h4 className="text-xl font-semibold mb-8 mt-16">
                   Method of Payment
                 </h4>
-                {/* Card Selection */}
-                <div className="flex text-sm md:text-xl  gap-8 border-2  border-gray-200 rounded py-4 md:py-8 px-2">
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="payment"
-                      className="md:w-4 md:h-4 md:mr-2 accent-primary-color"
-                    />{" "}
-                    Credit Card
-                  </label>
-                  <label className="flex items-center">
-                    <input
-                      type="radio"
-                      name="payment"
-                      className=" md:w-4 md:h-4 md:mr-2 accent-primary-color"
-                    />{" "}
-                    Online Payment
-                  </label>
+                {/* Card Selection mobile*/}
+                <div className="md:hidden flex flex-col gap-4 justify-between text-[10px] md:text-xl  md:gap-8 border-2  border-gray-200 rounded py-4 md:py-8 px-2">
+                  <section className="flex gap-4 justify-between">
+                    <label className="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="payment"
+                        className="md:w-4 md:h-4 md:mr-2 accent-primary-color"
+                      />{" "}
+                      Credit Card
+                    </label>
+                    <label className="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="payment"
+                        className=" md:w-4 md:h-4 md:mr-2 accent-primary-color"
+                      />{" "}
+                      Online Payment
+                    </label>
+                  </section>
                   <img
                     src="/images/cards.svg"
                     alt="cards"
@@ -170,6 +172,8 @@ const Checkout = () => {
                 className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-normal py-2 p-6 md:py-4 md:p-8 rounded mt-4 float-end"
               />
             </motion.div>
+
+            {/* Card section mobile ends */}
 
             {/* Order Summary Section */}
             <motion.div
@@ -196,7 +200,9 @@ const Checkout = () => {
                         <h3 className="text-md md:text-[15px] font-normal mb-1 md:w-64">
                           {item.name}
                         </h3>
-                        <p className="text-gray-700 font-normal mb-1 text-[16px]">Qty: {item.amount}</p>
+                        <p className="text-gray-700 font-normal mb-1 text-[16px]">
+                          Qty: {item.amount}
+                        </p>
                       </div>
                       <p className="text-gray-700">
                         ₦
