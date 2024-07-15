@@ -12,7 +12,7 @@ const fetchProducts = async (page) => {
       organization_id: process.env.REACT_APP_ORGANISATION_ID,
       reverse_sort: false,
       page: page,
-      size: 9,
+      size: 10,
       Appid: process.env.REACT_APP_APP_ID,
       Apikey: process.env.REACT_APP_API_KEY,
     },

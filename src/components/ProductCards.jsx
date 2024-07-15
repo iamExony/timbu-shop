@@ -1,13 +1,13 @@
 import React, { useContext, useState, useCallback } from 'react';
 import Modal from './Modal';
-import { ProductContext } from '../context/ProductContext';
+import { ProductCardContext } from '../context/ProductCardContext';
 import { MdShoppingCart, MdRemoveRedEye } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import Loader from '../pages/Loader';
 
 const ProductCards = () => {
-  const { products, isLoading, isError, isEmpty } = useContext(ProductContext);
+  const { products, isLoading, isError, isEmpty } = useContext(ProductCardContext);
   const { addToCart } = useContext(CartContext);
   const [selectedProduct, setSelectedProduct] = useState(null);
 

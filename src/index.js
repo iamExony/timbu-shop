@@ -5,16 +5,18 @@ import App from './App';
 import ProductProvider from './context/ProductContext';
 import CartProvider from './context/CartContext';
 import SidebarProvider from './context/SidebarContext';
-/* import { BrowserRouter } from "react-router-dom"; */
+import ProductCardProvider from './context/ProductCardContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <CartProvider>
   <SidebarProvider>
   <ProductProvider>
+  <ProductCardProvider>
     <React.StrictMode>
     <App />
   </React.StrictMode>
+  </ProductCardProvider>
   </ProductProvider>
   </SidebarProvider>
   </CartProvider>,
