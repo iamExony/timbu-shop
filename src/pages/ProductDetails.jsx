@@ -11,7 +11,7 @@ const ProductDetail = () => {
   if (!product) {
     return <div className='flex flex-col items-center my-12'>
       <h1 className='font-normal text-3xl text-headingColor'>Product Not found</h1>
-      <img src={NotFoundImage} alt='not found image' className='w-1/2'/>
+      <img src={NotFoundImage} alt='not found' className='w-1/2'/>
       
       </div>;
   }

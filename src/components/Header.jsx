@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import { NavLink, Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { SidebarContext } from "../context/SidebarContext";
@@ -13,7 +13,7 @@ const variants = {
 const Header = () => {
   const { cart } = useContext(CartContext);
   const { isOpen, setIsOpen } = useContext(SidebarContext);
-  const [count, setCount] = useState(1); // Assuming count state is for something else
+
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -53,27 +53,25 @@ const Header = () => {
         className="hidden md:flex md:gap-8 font-pop text-lg"
       >
         <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          <NavLink
+          <Link
             to="/"
             className="p-2 hover:border-b-2 hover:border-white"
             activeClassName="border-b-2 border-white"
             exact
           >
             Home
-          </NavLink>
+          </Link>
         </motion.button>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="p-2 hover:border-b-2 hover:border-white"
         >
-          <NavLink
+          <Link
             to="/products"
-            className="p-2 hover:border-b-2 hover:border-white"
-            activeClassName="border-b-2 border-white"
           >
             Product
-          </NavLink>
+          </Link>
         </motion.button>
         <motion.a
           whileHover={{ scale: 1.1 }}
@@ -93,6 +91,7 @@ const Header = () => {
           <div className="relative">
             <img
               src="/images/cart-icon.svg"
+              alt="cart icon"
               className="block md:hidden h-8 w-8"
             />
             {/* Circle div for mobile view */}
@@ -104,6 +103,7 @@ const Header = () => {
             <span className="relative">
               <img
                 src="/images/cart-icon2.svg"
+                alt="cart icon 2"
                 className="relative h-8 w-8"
               />
               {/* Circle div for desktop view */}
