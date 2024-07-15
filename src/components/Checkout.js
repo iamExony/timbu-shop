@@ -20,7 +20,7 @@ const Checkout = () => {
             CHECKOUT
           </h2>
 
-          <div className="flex flex-col md:flex-row justify-between">
+          <div className="flex flex-col md:flex-row justify-between gap-6">
             {/* Form Section */}
             <motion.div
               variants={fadeIn("right", 0.2)}
@@ -177,9 +177,9 @@ const Checkout = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.2 }}
-              className="md:w-1/2 md:ml-10 bg-[#FAF4FF]  px-4 md:sticky md:top-0"
+              className="md:w-1/2 md:ml-10 bg-[#FAF4FF] py-4 px-4 md:sticky md:top-0 rounded-[5px]"
             >
-              <h4 className="text-xl font-semibold my-12 ">Order Summary</h4>
+              <h4 className="text-xl font-semibold my-4 ">Order Summary</h4>
               {cart.map((item) => (
                 <div
                   key={item.unique_id}
@@ -212,10 +212,10 @@ const Checkout = () => {
                 <div className="flex justify-center">
                   <input
                     type="text"
-                    className="flex-1 border rounded-l placeholder:text-black md:w-[454px] md:h-[60px] p-4"
+                    className="flex md:flex-1 border rounded-l placeholder:text-black md:w-[454px] md:h-[60px] md:p-4 p-1 w-40"
                     placeholder="Promo Code"
                   />
-                  <button className="bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-semibold md:py-2 px-8 rounded">
+                  <button className="w-12 md:w-24 text-sm bg-primary-color hover:bg-secondaryColor hover:text-lightPink text-white font-normal p-1 md:py-2 md:px-8 rounded-r">
                     Apply
                   </button>
                 </div>
