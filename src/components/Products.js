@@ -36,7 +36,7 @@ const Products = () => {
 
   return (
     <>
-      <section id="product" className="w-full bg-[#FFF9F9]">
+      <section id="product" className="w-full pb-8 bg-[#FFF9F9]">
         <motion.section
           variants={fadeIn("right", 0.2)}
           initial="hidden"
@@ -111,14 +111,16 @@ const Products = () => {
                 </div>
               </div>
             ))}
+            
         </div>
 
         {selectedProduct && (
           <Modal product={selectedProduct} closeModal={closeModal} />
         )}
 
+        
         {/* Pagination */}
-        <div className="flex justify-center items-center mt-4">
+        <div className="flex justify-end items-center mt-4 w-[95%]">
           <button
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}
