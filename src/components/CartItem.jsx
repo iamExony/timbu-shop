@@ -34,7 +34,7 @@ const CartItem = ({ item }) => {
         className="w-32 h-32 object-cover rounded mr-4"
       />
       <div className="md:flex-1 flex flex-col items-start">
-        <h3 className="text-sm md:text-xl font-normal w-24">{item.name}</h3>
+        <h3 className="text-sm md:text-xl font-normal w-24 md:w-full">{item.name}</h3>
         <p className="hidden md:block text-gray-700">₦{price}</p>
 
         <div className="flex my-1 md:hidden flex-col justify-center items-start">
