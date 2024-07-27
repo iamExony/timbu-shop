@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { fadeIn } from "../variant";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -45,19 +46,19 @@ const Footer = () => {
                 <h3 className="font-semibold mb-2">Quick Links</h3>
                 <ul>
                   <li className="mb-1">
-                    <a href="#" className="hover:text-primary-color">
+                    <a href="/" className="hover:text-primary-color">
                       Home
                     </a>
                   </li>
                   <li className="mb-1">
-                    <a href="#" className="hover:text-primary-color">
+                    <Link to="/products" className="hover:text-primary-color">
                       Products
-                    </a>
+                    </Link>
                   </li>
                   <li className="mb-1">
-                    <a href="#" className="hover:text-primary-color">
+                    <Link to="/contacts" className="hover:text-primary-color">
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -65,12 +66,12 @@ const Footer = () => {
                 <h3 className="font-semibold mb-2">Support</h3>
                 <ul>
                   <li className="mb-1">
-                    <a href="#" className="hover:text-primary-color">
+                    <a href="/" className="hover:text-primary-color">
                       Help Center
                     </a>
                   </li>
                   <li className="mb-1">
-                    <a href="#" className="hover:text-primary-color">
+                    <a href="/" className="hover:text-primary-color">
                       FAQ
                     </a>
                   </li>
@@ -173,19 +174,19 @@ const Footer = () => {
                   <h3 className="font-semibold mb-2">Quick Links</h3>
                   <ul>
                     <li className="mb-1">
-                      <a href="#" className="hover:text-primary-color">
+                      <Link to="/" className="hover:text-primary-color">
                         Home
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-1">
-                      <a href="#" className="hover:text-primary-color">
+                      <Link to="/" className="hover:text-primary-color">
                         Products
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-1">
-                      <a href="#" className="hover:text-primary-color">
+                      <Link href="/contact" className="hover:text-primary-color">
                         Contact
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -193,12 +194,12 @@ const Footer = () => {
                   <h3 className="font-semibold mb-2">Support</h3>
                   <ul>
                     <li className="mb-1">
-                      <a href="#" className="hover:text-primary-color">
+                      <a href="/" className="hover:text-primary-color">
                         Help Center
                       </a>
                     </li>
                     <li className="mb-1">
-                      <a href="#" className="hover:text-primary-color">
+                      <a href="/" className="hover:text-primary-color">
                         FAQ
                       </a>
                     </li>
