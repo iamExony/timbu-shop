@@ -130,7 +130,7 @@ const Products = () => {
           >
             Previous
           </button>
-          {[...Array(totalPages)].map((_, index) => (
+          {[...Array(totalPages)]?.map((_, index) => (
             <button
               key={index + 1}
               onClick={() => paginate(index + 1)}
