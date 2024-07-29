@@ -76,7 +76,7 @@ const Products = () => {
           {!isLoading &&
             !isError &&
             !isEmpty &&
-            products.map((product) => (
+            products?.map((product) => (
               <div
                 key={product.unique_id}
                 className="w-full sm:w-auto md:w-auto mb-6 relative group"

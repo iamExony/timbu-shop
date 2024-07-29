@@ -35,7 +35,7 @@ const ProductCards = () => {
               <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center h-[471px] w-[352px] max-w-full">
                 <div className="w-full h-[323px] mb-4 overflow-hidden relative">
                   <img 
-                    src={`https://api.timbu.cloud/images/${product?.photos[0].url}`} 
+                    src={`https://api.timbu.cloud/images/${product.photos[0].url}`} 
                     alt={product.name} 
                     className="w-full h-full object-cover rounded transition-transform duration-300 transform group-hover:scale-105"
                   />
