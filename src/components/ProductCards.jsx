@@ -30,12 +30,12 @@ const ProductCards = () => {
           {isLoading && <p className="text-center w-full flex items-center justify-center h-40"><Loader /></p>}
           {isError && <p className="text-center w-full text-red-500">Error loading products.</p>}
           {isEmpty && <p className="text-center w-full">No products available.</p>}
-          {!isLoading && !isError && !isEmpty && products.map((product) => (
+          {!isLoading && !isError && !isEmpty && products?.map((product) => (
             <div key={product.unique_id} className="w-full sm:w-auto md:w-auto mb-6 relative group">
               <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center h-[471px] w-[352px] max-w-full">
                 <div className="w-full h-[323px] mb-4 overflow-hidden relative">
                   <img 
-                    src={`https://api.timbu.cloud/images/${product.photos[0].url}`} 
+                    src={`https://api.timbu.cloud/images/${product?.photos[0].url}`} 
                     alt={product.name} 
                     className="w-full h-full object-cover rounded transition-transform duration-300 transform group-hover:scale-105"
                   />
