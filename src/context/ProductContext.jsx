@@ -5,7 +5,8 @@ import axios from 'axios';
 export const ProductContext = createContext();
 
 const fetchProducts = async (page) => {
-  const apiUrl = `/api/products?`;
+  /* const apiUrl = `/api/products?`; */
+  const apiUrl = `https://api.timbu.cloud/products?`
 
   const response = await axios.get(apiUrl, {
     params: {
@@ -35,6 +36,7 @@ const ProductProvider = ({ children }) => {
       try {
         const data = await fetchProducts(currentPage);
         setProducts(data.items);
+        console.log(data.items)
         setTotalPages(Math.ceil(data.total / 9)); // Assuming `data.total` is the total number of products
         setIsEmpty(data.total === 0);
       } catch (error) {

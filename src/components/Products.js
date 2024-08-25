@@ -78,14 +78,14 @@ const Products = () => {
             !isEmpty &&
             products?.map((product) => (
               <div
-                key={product.unique_id}
+                key={product?.unique_id}
                 className="w-full sm:w-auto md:w-auto mb-6 relative group"
               >
                 <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center h-[471px] w-[352px] max-w-full">
                   <div className="w-full h-[323px] mb-4 overflow-hidden relative">
                     <img
-                      src={`https://api.timbu.cloud/images/${product.photos[0].url}`}
-                      alt={product.name}
+                      src={`https://api.timbu.cloud/images/${product?.photos[0].url}`}
+                      alt={product?.name}
                       className="w-full h-full object-cover rounded transition-transform duration-300 transform group-hover:scale-105"
                     />
                     <Link
@@ -96,10 +96,10 @@ const Products = () => {
                     </Link>
                   </div>
                   <h3 className="text-[19px] font-normal mb-2 text-center">
-                    {product.name}
+                    {product?.name}
                   </h3>
                   <p className="text-gray-700 mb-2 text-[18px]">
-                    ₦{product.current_price[0].NGN[0]}
+                    ₦{product?.current_price[0].NGN[0]}
                   </p>
                   <button
                     onClick={() => handleAddToCart(product)}

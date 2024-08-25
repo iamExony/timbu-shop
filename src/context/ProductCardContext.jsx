@@ -5,7 +5,8 @@ import axios from 'axios';
 export const ProductCardContext = createContext();
 
 const fetchProducts = async (page) => {
-  const apiUrl = `/api/products?`;
+ /*  const apiUrl = `/api/products?`; */
+  const apiUrl = `https://api.timbu.cloud/products?`;
 
   const response = await axios.get(apiUrl, {
     params: {
